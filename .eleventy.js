@@ -10,18 +10,18 @@ module.exports = function (eleventyConfig) {
   });
 
   // Before build hook to process CSS with PostCSS
-    eleventyConfig.on('beforeBuild', () => {
-        const inputPath = './src/assets/styles.css';
-        const outputPath = './src/assets/build.css';
+	eleventyConfig.on('beforeBuild', () => {
+		const inputPath = './src/assets/styles.css';
+		const outputPath = './src/assets/build.css';
 
-        try {
-          // Run the Tailwind CSS build command
-          execSync(`npx tailwindcss build ${inputPath} -o ${outputPath}`);
-        } catch (error) {
-          console.error(error);
-          process.exit(1);
-        }
-      });
+		try {
+		  // Run the Tailwind CSS build command
+		  execSync(`npx tailwindcss build ${inputPath} -o ${outputPath}`);
+		} catch (error) {
+		  console.error(error);
+		  process.exit(1);
+		}
+	  });
 
   return {
     dir: {

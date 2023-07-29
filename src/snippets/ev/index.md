@@ -3,7 +3,9 @@ name: console-log
 description: Insert a console.log() statement with a message
 code: |
   console.log("Hello, world!");
-
+tags:
+  - test
+  - bla
 ---
 
 # Console Log Snippet

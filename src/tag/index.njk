@@ -1,3 +1,11 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+---
+
 <!-- _templates/index.md.njk -->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +23,7 @@
   </header>
 
   <main class="max-w-4xl mx-auto py-8 px-4">
-    {% for snippet in collections.snippets %}
+    {% for snippet in collections[ tag ] %}
       <div class="bg-white shadow-lg rounded-lg mb-8 p-6">
         <h2 class="text-2xl font-semibold mb-4">{{ snippet.data.name }}</h2>
         <p class="text-gray-800 mb-6">{{ snippet.data.description }}</p>
