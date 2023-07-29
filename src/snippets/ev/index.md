@@ -1,5 +1,5 @@
 ---
-name: console-log
+name: EV
 description: Insert a console.log() statement with a message
 code: |
   console.log("Hello, world!");
