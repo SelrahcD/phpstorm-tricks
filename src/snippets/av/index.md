@@ -9,7 +9,7 @@ tags:
 ---
 
 ```xml
-  <root>
+<root>
     <element attribute="value">Hello, World!</element>
-  </root>
+</root>
 ```

@@ -5,13 +5,17 @@ layout: base.njk
 
 <header class="bg-grey-600 text-grey-900 text-center">
     <p>Welcome to my collection of PhpStorm tricks!</p>
-    <p class="mb-2">This site hosts a collection of live template snippets and postfix completion templates to supercharge your development in PhpStorm.</p>
-    <p><a href="https://www.jetbrains.com/help/phpstorm/sharing-live-templates.html#the-quick-way-copy-and-paste" class="text-blue-300 underline" target="_blank">Copy paste Live Templates in PhpStorm to install them.</a></p>
-    <p>You'll need to use the <a href="https://plugins.jetbrains.com/plugin/9862-custom-postfix-templates" class="text-blue-300 underline" target="_blank">Custom Postfix Template plugin</a> for the postfix templates.</p>
+    <p class="mb-2">This site hosts a collection of live template snippets and postfix completion templates to
+        supercharge your development in PhpStorm.</p>
+    <p><a href="https://www.jetbrains.com/help/phpstorm/sharing-live-templates.html#the-quick-way-copy-and-paste"
+          class="text-blue-300 underline" target="_blank">Copy paste Live Templates in PhpStorm to install them.</a></p>
+    <p>You'll need to use the <a href="https://plugins.jetbrains.com/plugin/9862-custom-postfix-templates"
+                                 class="text-blue-300 underline" target="_blank">Custom Postfix Template plugin</a> for
+        the postfix templates.</p>
     <p class="mt-2">Use the tags to see related snippets. Some snippets are best used with others !</p>
-  </header>
+</header>
 
-  <h2 class="text-2xl font-semibold mb-4">All Snippets</h2>
-  {% for snippet in collections.snippets %}
-    {{ snippetDisplay(snippet) }}
-  {% endfor %}
+<h2 class="text-2xl font-semibold mb-4">All Snippets</h2>
+{% for snippet in collections.snippets %}
+{{ snippetDisplay(snippet) }}
+{% endfor %}
