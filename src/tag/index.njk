@@ -6,29 +6,12 @@ pagination:
 permalink: /tags/{{ tag }}/
 layout: base.njk
 ---
+{%- from "macros/snippetDisplay.njk" import snippetDisplay -%}
 
 <main class="max-w-4xl mx-auto py-8 px-4">
   <h2 class="text-2xl font-semibold mb-4">All "{{tag}}" Snippets</h2>
   {% for snippet in collections[ tag ] %}
-    <div class="bg-white shadow-lg rounded-lg mb-8 p-6">
-      <h2 class="text-2xl font-semibold mb-4">{{ snippet.data.name }}</h2>
-      <p class="text-gray-800 mb-6">{{ snippet.data.description }}</p>
-      <div class="bg-gray-100 rounded-lg p-4">
-        <pre class="font-mono text-sm text-gray-800 whitespace-pre-wrap break-words">{{ snippet.data.code }}</pre>
-      </div>
-      <div class="mt-6">
-        <img src="./snippets/{{ snippet.fileSlug }}/example.gif" alt="{{ snippet.data.name }}" class="w-full rounded-lg shadow-lg">
-      </div>
-      <div class="mt-4">
-        <ul class="flex flex-wrap">
-          {% for tag in snippet.data.tags %}
-            <li class="mr-2 mb-2 bg-blue-500 text-white rounded-lg px-3 py-1 text-sm">
-              <a href="/tags/{{ tag }}">{{ tag }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
+    {{ snippetDisplay(snippet) }}
   {% endfor %}
 </main>
 
