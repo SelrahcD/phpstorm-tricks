@@ -1,5 +1,6 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/snippets/**/*.gif");
@@ -22,6 +23,9 @@ module.exports = function (eleventyConfig) {
 		  process.exit(1);
 		}
 	  });
+
+
+	eleventyConfig.addPlugin(syntaxHighlight);
 
   return {
     dir: {

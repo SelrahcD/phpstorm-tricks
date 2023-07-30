@@ -3,11 +3,16 @@ name: AV
 url: https://media.giphy.com/media/MoaQ9bwKYeWJ6qynbz/giphy-downsized-large.gif
 description: Insert a console.log() statement with a message
 code: |
-  console.log("Hello, world!");
+  public function build(): $TYPE$
+  {
+    return new $TYPE$($PARAMETERS$$END$);
+  }
 tags:
   - php
   - debugging
 ---
+
+
 
 # Console Log Snippet
 
