@@ -20,11 +20,11 @@
 </main>
 
 <div class="max-w-4xl mx-auto px-4">
-    <div class="hidden" id="advert-0">
+    <div class="hidden" id="bc-ad-0">
         Advert 0
     </div>
 
-    <div id="advert-1" class="hidden">
+    <div class="hidden" id="bc-ad-1">
         Advert 1
     </div>
 </div>
@@ -37,7 +37,7 @@
 
 <script>
     const random = Math.floor(Math.random() * 2);
-    const id = 'advert-' + random;
+    const id = 'bc-ad-' + random;
     const element = document.getElementById(id);
     element.classList.remove('hidden');
 </script>
