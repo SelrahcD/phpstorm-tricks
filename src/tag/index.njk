@@ -11,10 +11,8 @@ layout: base.njk
 ---
 {%- from "macros/snippetDisplay.njk" import snippetDisplay -%}
 
-<main class="max-w-4xl mx-auto py-8 px-4">
-  <h2 class="text-2xl font-semibold mb-4">All "{{tag}}" Snippets</h2>
-  {% for snippet in collections[ tag ] %}
-   {{ snippetDisplay(snippet) }}
-  {% endfor %}
-</main>
+<h2 class="text-2xl font-semibold mb-4">All "{{tag}}" Snippets</h2>
+{% for snippet in collections[ tag ] %}
+{{ snippetDisplay(snippet) }}
+{% endfor %}
 

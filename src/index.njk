@@ -11,9 +11,7 @@ layout: base.njk
     <p class="mt-2">Use the tags to see related snippets. Some snippets are best used with others !</p>
   </header>
 
-<main class="max-w-4xl mx-auto py-8 px-4">
   <h2 class="text-2xl font-semibold mb-4">All Snippets</h2>
   {% for snippet in collections.snippets %}
     {{ snippetDisplay(snippet) }}
   {% endfor %}
-</main>
