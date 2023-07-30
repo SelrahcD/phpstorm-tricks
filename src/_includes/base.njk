@@ -20,26 +20,57 @@
   </main>
 
   <div class="max-w-4xl mx-auto px-4">
-  <div class="mb-8 p-6 bg-orange-100 shadow-lg rounded-lg">
+  <div class="mb-8 p-6 bg-orange-100 shadow-lg rounded-lg hidden" id="advert-0">
         <p class="text-xl font-semibold mb-4 text-center">Do you speak French and want to stop hating your tests ?</p>
-        <a href="https://formation.charlesdesneuf.com/ameliorez-vos-tests-automatises?utm_medium=referral&utm_source=pub&utm_campaign=phpstorm-tricks" target="_blank" >
+        <a href="https://formation.charlesdesneuf.com/ameliorez-vos-tests-automatises?utm_medium=referral&utm_source=pub&utm_campaign=phpstorm-tricks" target="_blank">
           <img src="/assets/images/test_formation.jpg" alt='A cover picture saying "Améliorez vos tests automatisés" with a burrito.'/>
         </a>
-        <p>I've created a course to help developers to <a
+        <div class="mt-5">
+        <p class="mb-2">I've created a course to help developers to <a
             href="https://formation.charlesdesneuf.com/ameliorez-vos-tests-automatises?utm_medium=referral&utm_source=pub&utm_campaign=phpstorm-tricks" target="_blank" class="font-bold">improve
           their automated tests</a>.</p>
-        <p>I share ideas and technics to improve slow, flaky, failing for unexpected reason and hard to understand tests until they become tests we take joy to work with !</p>
-        <p>But you'll need to understand French...</p>
+        <p class="mb-2">I share ideas and technics to improve slow, flaky, failing for unexpected reason and hard to understand tests until they become tests we take joy to work with !</p>
+        <p class="mb-2">But you'll need to understand French...</p>
+        </div>
         <div class="text-center mt-2">
           <a href="https://formation.charlesdesneuf.com/ameliorez-vos-tests-automatises?utm_medium=referral&utm_source=pub&utm_campaign=phpstorm-tricks" target="_blank" class="bg-orange-500 hover:bg-orange-700 rounded-lg p-3">😯 But, I speak French !</a>
         </div>
+
   </div>
+
+  <div class="mb-8 p-6 bg-orange-100 shadow-lg rounded-lg flex flex-row hidden" id="advert-1">
+  <div>
+          <a href="https://formation.charlesdesneuf.com/guide-gratuit-5-idees-pour-ameliorer-la-lisibilite-de-vos-tests-automatises?utm_medium=referral&utm_source=pub&utm_campaign=phpstorm-tricks" target="_blank" >
+            <img src="/assets/images/freebie-lisibilite-cover-small.png" alt="La couverture du guide gratuite avec 5 astuces pour améliorer la lisibilité des tests."/>
+          </a>
+          </div>
+          <div class="px-4">
+          <div>
+           <p class="text-xl font-semibold mb-4 text-center">WTF ??</p>
+           <p class="mb-2">Tu veux améliorer la qualité de tes tests automatisés ? Ne cherche plus !</p>
+
+           <p class="mb-2">Télécharge ton guide gratuit qui contient 5 astuces pratiques pour améliorer la lisibilité de tes tests automatisés.</p>
+
+           <p class="mb-2">Dans ce guide, tu découvriras des conseils essentiels pour organiser le contenu de tes tests et améliorer leur lisibilité et leur maintenance.</p>
+</div>
+          <div class="text-center mt-8">
+            <a href="https://formation.charlesdesneuf.com/guide-gratuit-5-idees-pour-ameliorer-la-lisibilite-de-vos-tests-automatises?utm_medium=referral&utm_source=pub&utm_campaign=phpstorm-tricks" target="_blank" class="bg-orange-500 hover:bg-orange-700 rounded-lg p-3">Télécharger le guide !</a>
+          </div>
+          </div>
+    </div>
 </div>
 
 
   <footer class="bg-gray-400 py-4 text-white text-center">
     <p class="text-sm mb-2">Created by <a href="https://www.charlesdesneuf.com/" target="_blank" class="underline">Charles Desneuf</a></p>
   </footer>
+
+	<script>
+	const random = Math.floor(Math.random() * 2);
+	const id = 'advert-' + random;
+	console.log(id)
+	document.getElementById(id).classList.remove('hidden');
+	</script>
 
 </body>
 

@@ -7,7 +7,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/snippets/**/*.gif");
   eleventyConfig.addPassthroughCopy("src/assets/build.css");
-  eleventyConfig.addPassthroughCopy("src/assets/images/*.jpg");
+  eleventyConfig.addPassthroughCopy("src/assets/images/*.(jpg|png)");
 
   eleventyConfig.addCollection("snippets", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/snippets/**/*.md");
