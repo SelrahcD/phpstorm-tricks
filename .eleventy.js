@@ -3,6 +3,8 @@ const fs = require('fs');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addWatchTarget('./src/snippets/**/*.md')
+
   eleventyConfig.addPassthroughCopy("src/snippets/**/*.gif");
   eleventyConfig.addPassthroughCopy("src/assets/build.css");
 
