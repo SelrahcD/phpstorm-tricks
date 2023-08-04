@@ -11,7 +11,7 @@ rename_mov:
 gifs: $(GIFS)
 
 $(GIFS): %/example.gif : %/example.mov
-	/opt/homebrew/bin/ffmpeg -i $^ -vf "fps=10,setpts=0.5*PTS,scale=$(SIZE):-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 $@
+	/opt/homebrew/bin/ffmpeg -i $^ -vf "fps=10,setpts=0.5*PTS,scale=860:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 $@
 
-%/example.mov: %/*.mov
+%/example.mov: $(filter-out %/example.mov, %/*.mov)
 	mv -- "$?" "$@"
