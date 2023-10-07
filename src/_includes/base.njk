@@ -16,7 +16,7 @@
     <h1 class="text-4xl font-bold"><a href="/" class="text-gray-900 hover:text-sky-500">PhpStorm Live Template & Postfix Snippets</a></h1>
 </header>
 
-<main class="max-w-4xl mx-auto px-4">
+<main class="max-w-4xl mx-auto px-4" id="main">
     {{ content | safe }}
 </main>
 
@@ -88,10 +88,14 @@
 </footer>
 
 <script>
+    const main = document.getElementById('main');
     const random = Math.floor(Math.random() * 2);
     const id = 'bc-ad-' + random;
-    const element = document.getElementById(id);
-    element.classList.remove('hidden');
+    const advElement = document.getElementById(id);
+    const snippets = document.getElementsByClassName('snippet');
+    const snippet = snippets[Math.floor(Math.random() * (snippets.length - 1)) + 1];
+    snippet.parentNode.insertBefore(advElement, snippet);
+    advElement.classList.remove('hidden');
 </script>
 
 {% initClipboardJS %}
