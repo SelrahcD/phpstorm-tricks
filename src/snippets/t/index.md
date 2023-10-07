@@ -1,9 +1,9 @@
 ---
 name: "@t"
-description: Generate an empty PhpUnit test with the `@test` annotation
+description: Generate an empty PhpUnit test with the `@test` annotation.
 type: Live template
 tags:
-  - testing
+  - Testing
   - Generate test
 ---
 ```xml

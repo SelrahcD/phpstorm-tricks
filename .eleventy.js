@@ -3,8 +3,12 @@ const fs = require('fs');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const markdownIt = require("markdown-it");
+const codeClipboard = require("eleventy-plugin-code-clipboard");
 
 module.exports = function (eleventyConfig) {
+	eleventyConfig.addPlugin(syntaxHighlight);
+	eleventyConfig.addPlugin(codeClipboard);
+
 	eleventyConfig.addWatchTarget('./src/snippets/**/*.md')
 
 	eleventyConfig.addPassthroughCopy("src/snippets/**/*.gif");
@@ -18,7 +22,9 @@ module.exports = function (eleventyConfig) {
 	// Add within your config module
 	const md = new markdownIt({
 		html: true,
-	});
+	}).use(codeClipboard.markdownItCopyButton);
+
+	eleventyConfig.setLibrary("md", md);
 
 	eleventyConfig.addFilter("markdown", (content) => {
 		return md.render(content);
@@ -37,9 +43,6 @@ module.exports = function (eleventyConfig) {
 			process.exit(1);
 		}
 	});
-
-
-	eleventyConfig.addPlugin(syntaxHighlight);
 
 	return {
 		dir: {

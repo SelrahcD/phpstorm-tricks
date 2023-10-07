@@ -1,9 +1,9 @@
 ---
 name: "@ts"
-description: Generate an empty skipped PhpUnit test with the `@test` annotation
+description: Generate an empty skipped PhpUnit test with the `@test` annotation.
 type: Live template
 tags:
-    - testing
+    - Testing
     - Generate test
 ---
 
