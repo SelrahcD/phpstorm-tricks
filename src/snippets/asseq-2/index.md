@@ -1,5 +1,5 @@
 ---
-name: ev
+name: asseq
 description: Generate a call to assert equals 
 type: Custom Postfix Template
 tags:
