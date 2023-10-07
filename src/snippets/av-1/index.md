@@ -1,6 +1,5 @@
 ---
 name: av
-url: https://media.giphy.com/media/MoaQ9bwKYeWJ6qynbz/giphy-downsized-large.gif
 description: Generate an actual variable for tests.
 type: Live template
 tags:
