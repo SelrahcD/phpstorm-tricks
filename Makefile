@@ -5,10 +5,6 @@ SIZE := 860
 
 $(info $(GIFS))
 
-#.PHONY: rename_mov
-#rename_mov:
-#	find ./src/snippets -name '*.mov' -print0 -exec sh -c 'mv -- "{}" $$(dirname "{}")/example.mov' \;
-
 .PHONY: gifs
 gifs: $(GIFS)
 
