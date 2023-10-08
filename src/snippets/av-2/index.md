@@ -9,5 +9,5 @@ tags:
 
 ```js
 .av : Create an expected variable
-    ANY -> \$actual$var:capitalize(groovyScript("_1.substring(1)", phpSuggestVariableName()))$  = $expr$;$END$
+    ANY -> \$actual$var:capitalize(groovyScript("if(_1) { _1.substring(1) } else { _1 }", phpSuggestVariableName()))$ = $expr$;$END$
 ```
